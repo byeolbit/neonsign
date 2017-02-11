@@ -1,0 +1,175 @@
+@font-face {
+font-family: 'BeonMedium';
+src: url('beon-webfont.eot');
+src: local('☺'), url('beon-webfont.eot?#iefix') format('embedded-opentype'),url('beon-webfont.woff') format('woff'),url('beon-webfont.ttf') format('truetype'),url('beon-webfont.svg#BeonMedium') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 700px;
+    background: orange;
+    margin: 10px 0 0 0;
+    overflow: hidden;
+}
+
+.background {
+    margin: -40px 0 0 -40px;
+    width: 120%;
+    height: 120%;
+    background: url('img/bg1.JPG');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    position: relative;
+}
+
+.sign-container {
+    width: 410px;
+    height: 410px;
+    border-radius: 50%;
+    border: solid 14px lightgrey;
+    background-color:rgb(50,50,50);
+    margin: 0 auto 0 auto;
+    box-sizing: content-box;
+    position: relative;
+    top: -95%;
+}
+
+.sign-border {
+    width:360px;
+    height:360px;
+    border: solid 6px #ff22fa;
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 10px #ff22fa);
+    box-shadow: 0px 7px 4px rgba(0,0,0,0.5);
+    box-sizing: content-box;
+    position: relative;
+    top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sign-border-inner {
+    width:364px;
+    height:364px;
+    border: solid 2px white;
+    border-radius: 50%;
+    box-sizing: content-box;
+    position: relative;
+    top: -350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sign {
+    font-family: 'BeonMedium',sans-serif;
+    font-size: 4em;
+    text-align: center;
+    text-shadow:
+        0px 0px 20px #ff22fa,
+        0px 0px 20px #ff22fa,
+        7px 7px 3px rgba(0,0,0,0.5);
+    -webkit-text-stroke-color: #ff22fa;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: white;
+    font-weight: bolder;
+    position: relative;
+    top: -625px;
+}
+
+.sign p {
+    line-height: 10px;
+}
+
+.blink {
+    animation: blinks 4s infinite ;
+}
+
+@keyframes blinks {
+    0%,2%,19%,91%,100% {
+        -webkit-text-stroke-width: 0;
+        -webkit-text-fill-color: rgba(0,0,0,1);
+        text-shadow:7px 7px 3px rgba(0,0,0,0.5);
+    }
+
+    1%,6%,18%,20%,21%,22%,71% {
+        -webkit-text-stroke-color: #ff22fa;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-fill-color: white;
+        text-shadow:
+        0px 0px 20px #ff22fa,
+        0px 0px 20px #ff22fa,
+        7px 7px 3px rgba(0,0,0,0.5);
+    }
+}
+
+.particle {
+    width: 2px;
+    height: 2px;
+    position: relative;
+    background-color: orange;
+    top: -90px;
+    left: 295px;
+}
+
+.particle_a {
+    animation: particle_a 4s infinite ease-out;
+}
+
+.particle_b {
+    animation: particle_b 4s infinite;
+}
+
+.particle_c {
+    animation: particle_c 4s infinite;
+}
+
+@keyframes particle_a {
+    0%{
+        transform: rotate(-45deg) translateX(0px) rotate(-45deg);
+    }
+    10%{
+        transform: rotate(40deg) translateX(40px) rotate(40deg);
+    }
+    
+    15%, 100% {
+        background-color: rgba(0,0,0,0);
+        transform: rotate(40deg) translateX(40px) rotate(40deg);
+    }
+}
+
+
+@keyframes particle_b {
+    0%{
+        transform: rotate(40deg) translateX(0px) rotate(40deg);
+    }
+    10%{
+        transform: rotate(20deg) translateX(-50px) rotate(20deg);
+    }
+    
+    15%, 100% {
+        background-color: rgba(0,0,0,0);
+        transform: rotate(20deg) translateX(-50px) rotate(20deg);
+    }
+}
+
+@keyframes particle_c {
+    0%{
+        transform: rotate(-90deg) translateX(0px) rotate(-90deg);
+    }
+    10%{
+        transform: rotate(-50deg) translateX(40px) rotate(-50deg);
+    }
+    
+    15%, 100% {
+        background-color: rgba(0,0,0,0);
+        transform: rotate(-50deg) translateX(40px) rotate(-50deg);
+    }
+}
