@@ -95,7 +95,8 @@ body {
 @keyframes blinks {
     0%,2%,19%,91%,100% {
         -webkit-text-stroke-width: 0;
-        -webkit-text-fill-color: rgba(0,0,0,1);
+        -webkit-text-fill-color: black;
+        -webkit-text-stroke-color: black;
         text-shadow:7px 7px 3px rgba(0,0,0,0.5);
     }
 
